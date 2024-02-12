@@ -1,0 +1,33 @@
+const inputString = 'amanaplanacanalpanama'
+
+
+//reverse a string
+function reverseString(inputString){
+  return inputString.split('').reverse().join('')
+}
+
+console.log('The Reverse string is: ' + reverseString(inputString))
+const doubleFlip = reverseString(inputString)
+console.log('And now let\'s flip it back: ' +reverseString(doubleFlip))
+
+
+//check if a word is a palindrome
+function isPalindrome(inputString) {
+  let reverseString = inputString.split('').reverse().join('')
+  return inputString == reverseString ? console.log(inputString + ' is a palindrome')  : console.log(inputString + ' is not a palindrome') 
+}
+isPalindrome(inputString)
+
+
+
+//count characters function
+function countCharacters(inputString) {
+  let charCount = {};
+  for (let character of inputString){ 
+    charCount[character] ? charCount[character]++ : charCount[character] = 1
+  }
+  return charCount
+}
+
+let count = countCharacters(inputString)
+console.log(`The count is: ${JSON.stringify(count)}`);
